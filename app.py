@@ -3,7 +3,12 @@ import streamlit as st
 import numpy as np
 
 # Load the trained model
-model = tf.keras.models.load_model('cifar10_model.keras')
+try:
+    model = tf.keras.models.load_model('cifar10_model.keras')
+except Exception as e:
+    st.error(f"Error loading the model: {e}")
+    raise  # This will re-raise the exception and provide more details in the console
+
 
 # Streamlit app
 st.title("Image Classification App")
