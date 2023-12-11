@@ -9,7 +9,8 @@ model = tf.keras.models.load_model('cifar10_model.h5')
 
 # Streamlit app
 st.title("Image Classification App")
-
+st.caption('Class 0 - 9')
+st.caption('airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck')
 # Upload an image through Streamlit
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
