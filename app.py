@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 
 # Load the trained model
-model = tf.keras.models.load_model('cifar10_model.keras', compile=False)
+model = tf.keras.models.load_model('cifar10_model.h5')
 
 
 
