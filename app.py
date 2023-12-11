@@ -3,11 +3,8 @@ import streamlit as st
 import numpy as np
 
 # Load the trained model
-try:
-    model = tf.keras.models.load_model('/mount/src/colab/cifar10_model.keras', compile=False)
-except Exception as e:
-    st.error(f"Error loading the model: {e}")
-    raise  # This will re-raise the exception and provide more details in the console
+model = tf.keras.models.load_model('/mount/src/colab/cifar10_model.keras', compile=False)
+
 
 
 # Streamlit app
